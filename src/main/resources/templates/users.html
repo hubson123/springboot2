@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Pozdrawiam Dominika D</p><table cellpadding="1" border="4">
+    <thead><th>Login</th><th>Password</th></thead><tbody>
+<div th:each="users: ${allusers}">
+   <tr>
+    <td> <p th:text="${users.login}"></p></td>
+       <td> <p th:text="${users.password}"></p></td></tr></tbody></table>
+</div>
+
+
+</body>
+</html>
