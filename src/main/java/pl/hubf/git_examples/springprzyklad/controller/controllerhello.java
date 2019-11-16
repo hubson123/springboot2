@@ -18,4 +18,17 @@ public class controllerhello {
         modeltaki.setViewName("home");
         return modeltaki;
     }
+    @GetMapping("/hi")
+    ModelAndView kolejnyview(ModelAndView mod,@RequestParam(defaultValue = "imie") String imie,
+                             @RequestParam(defaultValue = "kolek") String nazwisko,
+                                     @RequestParam(defaultValue = "serock12") String adres){
+        logger.info("imie: {}",imie);
+        logger.info("nazwisko: {}",nazwisko);
+        logger.info("adres: {}",adres);
+        mod.addObject("imie",imie);
+        mod.addObject("nazwisko",nazwisko);
+        mod.addObject("adres",adres);
+        mod.setViewName("home");
+        return mod;
+    }
 }
