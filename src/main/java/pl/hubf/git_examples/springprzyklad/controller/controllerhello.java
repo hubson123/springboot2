@@ -26,6 +26,7 @@ public class controllerhello {
     ModelAndView myfirstView(ModelAndView modeltaki,@RequestParam(defaultValue = "dybcio") String name){
         logger.info("name: {}",name);
         modeltaki.addObject("user",name);
+        modeltaki.addObject("new=atrib","empty");
         modeltaki.setViewName("home");
         return modeltaki;
     }
